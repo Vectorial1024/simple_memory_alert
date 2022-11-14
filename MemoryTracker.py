@@ -30,7 +30,7 @@ class MemoryTracker:
         if percentage >= self.critical_memory_percent:
             if not self.previous_state['critical_memory']:
                 self.previous_state['critical_memory'] = True
-                self.previous_state['high_memory'] = True
+                self.previous_state['high_memory'] = False
                 self.alert_critical_memory()
         elif percentage >= self.high_memory_percent:
             if not self.previous_state['high_memory']:
