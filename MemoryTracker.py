@@ -24,6 +24,7 @@ class MemoryTracker:
         total_memory = memory_stats.total + swap_stats.total
         used_memory = memory_stats.used + swap_stats.used
         percentage = used_memory / total_memory * 100
+        print(f"Memory usage: {round(percentage, 4)}%", flush=True)
 
         # check critical memory first
         if percentage >= self.critical_memory_percent:
